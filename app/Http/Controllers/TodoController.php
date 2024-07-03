@@ -40,7 +40,6 @@ class TodoController extends Controller
         $imageName = Null;
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();
-        
             $request->image->move(public_path('images'), $imageName);
         }
     
